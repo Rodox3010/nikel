@@ -16,7 +16,7 @@ document.getElementById("transaction-form").addEventListener("submit", function(
 
     const value = parseFloat(document.getElementById ("value-input").value);
     const description = document.getElementById("description-input").value;
-    const data = document.getElementById("date-input").value;
+    const date = document.getElementById("date-input").value;
     const type = document.querySelector('input[name="type-input"]:checked').value;
     
     data.transactions.unshift({value: value, type: type, description: description, date: date});
@@ -86,7 +86,7 @@ function getCashIn() {
                         <div class="row">
                             <div class="col-12 col-md-8"><p>${cashIn[index].description}</p> </div>
                             <div class="col-12 col-md-3 d-flex justify-content-end">
-                                ${cashIn[index].data}
+                                ${cashIn[index].date}
                             </div>
                         </div>
                     </div>
@@ -125,7 +125,7 @@ function getCashOut() {
                         <div class="row">
                             <div class="col-12 col-md-8"><p>${cashIn[index].description}</p> </div>
                             <div class="col-12 col-md-3 d-flex justify-content-end">
-                                ${cashIn[index].data}
+                                ${cashIn[index].date}
                             </div>
                         </div>
                     </div>

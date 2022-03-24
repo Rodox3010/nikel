@@ -16,10 +16,10 @@ document.getElementById("transaction-form").addEventListener("submit", function(
 
     const value = parseFloat(document.getElementById ("value-input").value);
     const description = document.getElementById("description-input").value;
-    const data = document.getElementById("date-input").value;
+    const data = document.getElementById("data-input").value;
     const type = document.querySelector('input[name="type-input"]:checked').value;
     
-    data.transactions.unshift({value: value, type: type, description: description, date: date});
+    data.transactions.unshift({value: value, type: type, description: description, data: data});
 
     saveData(data);
     e.target.reset();
@@ -61,7 +61,7 @@ function logout() {
 }
 
 function getTransactions() {
-    const getTransactions = data.transactions;
+    const transactions = data.transactions;
     let transactionsHtml = ``;
 
     if(transactions.length) {

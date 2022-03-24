@@ -27,11 +27,11 @@ document.getElementById("login-form").addEventListener("submit", function(e) {
         }
 
         saveSession(email, checkSession);
+        window.location.href ="home.html";
 
-        
     }
 
-    window.location.href ="home.html";
+    
 
 });
 
@@ -93,7 +93,7 @@ function saveSession(data, saveSession) {
         localStorage.setItem("session", data);
     }
 
-    sessionStorage.setItem(logged, data);
+    sessionStorage.setItem("logged", data);
 }
 
 function getAccount(key){
